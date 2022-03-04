@@ -1,0 +1,8 @@
+https://github.com/Phamtheduyet123/my_new_project.git
+
+git init : khởi tạo 1 repository mới
+
+git remote add origin +đường link vừa tạo: kết nối tới Remote Repository
+git add : chỉ định git theo dấu các thay đổi
+
+git push :đẩy dữ liệu từ local repository lên remote repository
