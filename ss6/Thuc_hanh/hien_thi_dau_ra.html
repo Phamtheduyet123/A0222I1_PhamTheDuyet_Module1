@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<!-- Hiển thị kết quả hàm alert<-->
+<button onclick="showme();">lick me</button>
+<!-- Hiển thị kết quả sử dụng thẻ HTMl<-->
+<div id="massageDiv"></div>
+<button onclick="showme1();">Click_me!</button>
+<!-- Hiển thị kết quả hàm document.write()<-->
+<button onclick="showme2();">Click_me</button>
+<!-- Hiển thị kết quả hàm console.log()<-->
+<button onclick="showme3();">Click_me</button>
+<script>
+    function showme() {
+ alert('Xin chào');
+    }
+    function showme1() {
+        document.getElementById("massageDiv").innerHTML='Xin chào';
+    }
+    function showme2() {
+        document.write('Xin chào!');
+    }
+    function showme3() {
+        console.log('Xin chào!');
+    }
+</script>
+</body>
+</html>

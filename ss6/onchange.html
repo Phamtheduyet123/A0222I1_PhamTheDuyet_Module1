@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js</title>
+</head>
+<body>
+<!--<select onchange="dosome_thing()" id="getvalue">
+    <option value="Gà">Chicken</option>
+    <option value="chó">Dog</option>
+    <option value="mèo">Cat</option>
+    <option value="Gấu">Bear</option>
+</select><-->
+<select id="getvalue">
+    <option value="Gà">Chicken</option>
+    <option value="chó">Dog</option>
+    <option value="mèo">Cat</option>
+    <option value="Gấu">Bear</option>
+</select>
+<script>
+    var selecElement = document.getElementById("getvalue");
+    selecElement.addEventListener("change",changeFunction);
+    function changeFunction(){
+        var selecvalue = document.getElementById("getvalue").value;
+        alert(selecvalue);
+
+    }
+</script>
+</body>
+</html>
+<!--<script>
+    function dosome_thing() {
+    var selectedValue=document.getElementById("getvalue").value;
+    alert(selectedValue);
+    }
+</script><-->
