@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <style>
+        td {
+            text-align: center;
+            font-size: 10px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Amount</td>
+        <th style="width: 50px"></th>
+        <td>From Currency</td>
+        <th style="width: 50px"></th>
+        <td>To Currency</td>
+
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="input" name="q">
+        </td>
+        <td></td>
+        <td>
+            <select id="a">
+                <option id="viet">Viet Nam</option>
+                <option id="my">USD</option>
+            </select>
+        </td>
+        <td></td>
+        <td>
+            <select id="b">
+                <option id="vietnam">Viet Nam</option>
+                <option id="usd">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" name="q" onclick="submit()" value="Convert">Convert
+        </td>
+    </tr>
+    <tr></tr>
+    <tr><table  style="width: 10px">
+        <td style="text-align: left;" >Result:</td>
+        <td style="text-align: left" id="k"></td>
+        <td style="text-align: left" id="h"></td>
+    </table>
+    </tr>
+
+
+</table>
+
+<script>
+    function submit() {
+        let a = document.getElementById("input").value;
+        let b = document.getElementById("viet").value;
+        let c = document.getElementById("my").value;
+        let d = document.getElementById("vietnam").value;
+        let e = document.getElementById("usd").value;
+        let t = document.getElementById("a").value;
+        let r = document.getElementById("b").value;
+        if (t == b && r == c) {
+            let money = a / 23000;
+            let txt = "USD"
+            document.getElementById("k").innerHTML = money;
+            document.getElementById("h").innerText = txt;
+
+        }
+        if (t == b && r == b) {
+            let money = a;
+            let txt = "VietNameese"
+            document.getElementById("k").innerHTML = money;
+            document.getElementById("h").innerHTML = txt;
+        }
+        if (t == c && r == c) {
+            let money = a;
+            let txt = "USD"
+            document.getElementById("k").innerHTML = money;
+            document.getElementById("h").innerText = txt;
+
+        }
+        if (t == c && r == b) {
+            let money = a * 23000;
+            let txt = "VietNameese"
+            document.getElementById("k").innerHTML = money;
+            document.getElementById("h").innerHTML = txt;
+        }
+
+
+    }
+
+</script>
+</body>
+</html>
