@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="number" type="number" name="q">
+        </td>
+        <td>
+            <input id="last" type="number" name="q">
+        </td>
+    </tr>
+    <tr><table onclick="abc()">
+            <td>
+                <button type="button" name="q"  onclick="addition()" value="Addition">Addition(+)
+            </td>
+           <td>
+                <button type="button" name="q"  onclick="subtraction()" value="Subtraction">Subtraction(-)
+            </td>
+            <td>
+                <button type="button" name="q" onclick="multi()" value="Multiplication(X)">Multiplication(X)
+            </td>
+            <td>
+                <button type="button" name="q" onclick="divide()" value="Division(/)">Division(/)
+            </td>
+    </table>
+    </tr>
+    <tr><table style="text-align: left" >
+        <td>Result</td>
+        <td id="g">:</td>
+        <td id="operator"></td>
+    </table>
+    </tr>
+</table>
+<script>
+    function addition() {
+        let a = document.getElementById("number").value;
+        a = parseInt(a);
+        let b = document.getElementById("last").value;
+        b = parseInt(b);
+        let total = a+b;
+        document.getElementById("g").innerText="Addition:";
+    document.getElementById("operator").innerHTML = total;
+    }
+   function subtraction() {
+       let a = document.getElementById("number").value;
+       a = parseInt(a);
+       let b = document.getElementById("last").value;
+       b = parseInt(b);
+       let subtract = a - b;
+       document.getElementById("g").innerText="Subtraction:"
+       document.getElementById("operator").innerHTML = subtract;
+    }
+    function multi(){
+        let a = document.getElementById("number").value;
+        a = parseInt(a);
+        let b = document.getElementById("last").value;
+        b = parseInt(b);
+        let multiply = a*b;
+        document.getElementById("g").innerText="Multi:"
+        document.getElementById("operator").innerHTML = multiply;
+    }
+    function divide () {
+        let a = document.getElementById("number").value;
+        a = parseInt(a);
+        let b = document.getElementById("last").value;
+        b = parseInt(b);
+        let divide = a/b;
+        document.getElementById("g").innerText="Division:"
+        document.getElementById("operator").innerHTML = divide;
+    }
+
+</script>
+</body>
+</html>
