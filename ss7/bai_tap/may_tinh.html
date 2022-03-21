@@ -5,7 +5,7 @@
     <title>Hello world</title>
 </head>
 <body>
-<table>
+<table >
     <tr>
         <td>
             <input id="number" type="number" name="q">
@@ -13,7 +13,7 @@
         <td>
             <input id="last" type="number" name="q">
         </td>
-    </tr>
+   </tr>
     <tr><table onclick="abc()">
             <td>
                 <button type="button" name="q"  onclick="addition()" value="Addition">Addition(+)
@@ -29,7 +29,9 @@
             </td>
     </table>
     </tr>
-    <tr><table style="text-align: left" >
+    </tr>
+    
+    <tr><table style="text-align: left"  >
         <td>Result</td>
         <td id="g">:</td>
         <td id="operator"></td>
@@ -37,7 +39,7 @@
     </tr>
 </table>
 <script>
-    function addition() {
+   function addition() {
         let a = document.getElementById("number").value;
         a = parseInt(a);
         let b = document.getElementById("last").value;

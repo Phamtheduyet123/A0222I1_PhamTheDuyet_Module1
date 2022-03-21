@@ -10,7 +10,7 @@
 
         }
 
-        .table {
+        table {
             border-collapse: collapse;
             border: 10px;
             padding: 1px;
@@ -31,242 +31,147 @@
     </style>
 </head>
 <body>
-<table class="table">
-    <tr>
-        <td colspan="7" id="cc" style="height: 25px; text-align: right" class="sss"></td>
-    </tr>
-    <tr>
-        <td colspan="7" id="ee" style="height: 25px; text-align: right" class="sss"></td>
-        <!--  <input type="text" name="p" id="result" style="text-align: right; width: 98%" value="0"><-->
-    </tr>
-    <tr>
-        <td>
-            <input type="button" onclick="()" name="q" value="Rad" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" class="number" value="......." class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="x!" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="(" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value=")" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="%" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="Action()" name="q" value="AC" class="bbb">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="button" onclick="()" name="q" value="Lnv" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="sin" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="Ln" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="seven()" name="q" value="7" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="eight()" name="q" value="8" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="nine()" name="q" value="9" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="divide()" name="q" value="÷" class="bbb">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="button" onclick="()" name="q" value="Л" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="cos" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="Log" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="four()" name="q" value="4" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="five()" name="q" value="5" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="six()" name="q" value="6" class="number">
-        </td>
-        <td>
-            <input type="button" onclick=" multiply()" name="q" value="X" class="bbb">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="button" onclick="()" name="q" value="e" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="tan" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="ѵ" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="one()" name="q" value="1" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="two()" name="q" value="2" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="three()" name="q" value="3" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="subtract()" name="q" value="-" class="bbb">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="button" onclick="()" name="q" value="Ans" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="EXP" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="^" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="zero()" name="q" value="O" class="number">
-        </td>
-        <td>
-            <input type="button" onclick="()" name="q" value="." class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="equal()" name="q" value="=" style="background-color:#13a2ff;;" class="bbb">
-        </td>
-        <td>
-            <input type="button" onclick="plus()" id="pluss" name="q" value="+" class="bbb">
-        </td>
-    </tr>
-</table>
+<form>
+    <table>
+        <tr>
+            <td colspan="7" id="ee" style="height: 25px; width: 500px; text-align: right" class="sss">
+            </td>
+            <!--  <input type="text" name="p" id="result" style="text-align: right; width: 98%" value="0"><-->
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="q()" name="q" value="Rad" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" class="number" value=".......">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="x!" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="(" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value=")" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="%" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="Action()" name="q" value="AC" class="bbb">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="q()" name="q" value="Lnv" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="sin" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="Ln" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="display('7')" name="q" value="7" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('8')" name="q" value="8" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('9')" name="q" value="9" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('/')" name="q" value="÷" class="bbb">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="q()" name="q" value="Л" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="cos" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="Log" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="display('4')" name="q" value="4" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('5')" name="q" value="5" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('6')" name="q" value="6" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('*')" name="q" value="X" class="bbb">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="q()" name="q" value="e" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="tan" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="ѵ" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="display('1')" name="q" value="1" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('2')" name="q" value="2" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('3')" name="q" value="3" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="display('-')" name="q" value="-" class="bbb">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="q()" name="q" value="Ans" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="EXP" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="^" class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="display('0')" name="q" value="O" class="number">
+            </td>
+            <td>
+                <input type="button" onclick="q()" name="q" value="." class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="equal()" name="q" value="=" style="background-color:#13a2ff"
+                       class="bbb">
+            </td>
+            <td>
+                <input type="button" onclick="display('+')" id="pluss" name="q" value="+" class="bbb">
+            </td>
+        </tr>
+    </table>
+</form>
 <script>
-    var numBer = 0;
-    document.getElementById("ee").innerHTML = numBer;
 
-    function zero() {
-        let o = 0;
-        let O = (numBer * 10) + o;
-        document.getElementById("ee").innerHTML = O;
-        numBer = O
+    //radom tự đặt!
+    function display(radom) {
+        document.getElementById("ee").innerHTML += radom;
     }
 
-    function one() {
-        let a = 1;
-        let A = (numBer * 10) + a;
-        document.getElementById("ee").innerHTML = A;
-        numBer = A;
-    }
-
-    function two() {
-        let b = 2;
-        let B = (numBer * 10) + b;
-        document.getElementById("ee").innerHTML = B;
-        numBer = B;
-
-    }
-
-    function three() {
-        let c = 3;
-        let C = (numBer * 10) + c;
-        document.getElementById("ee").innerHTML = C;
-        numBer = C;
-    }
-
-    function four() {
-        let d = 4;
-        let D = (numBer * 10) + d;
-        document.getElementById("ee").innerHTML = D;
-        numBer = D;
-    }
-
-    function five() {
-        let e = 5;
-        let E = (numBer * 10) + e;
-        document.getElementById("ee").innerHTML = E;
-        numBer = E;
-    }
-
-    function six() {
-        let f = 6;
-        let F = (numBer * 10) + f;
-        document.getElementById("ee").innerHTML = F;
-        numBer = F;
-    }
-
-    function seven() {
-        let g = 7;
-        let G = (numBer * 10) + g;
-        document.getElementById("ee").innerHTML = G;
-        numBer = G;
-    }
-
-    function eight() {
-        let h = 8;
-        let H = (numBer * 10) + h;
-        document.getElementById("ee").innerHTML = H;
-        numBer = H;
-    }
-
-    function nine() {
-        let i = 9;
-        let I = (numBer * 10) + i;
-        document.getElementById("ee").innerHTML = I;
-        numBer = I;
-    }
-
-    let p
-
-    function plus() {
-        document.getElementById("ee").innerText = equal1;
-        document.getElementById("cc").innerHTML = numBer;
-        p = numBer;
-        document.getElementById("ee").innerHTML = "+";
-        numBer = 0;
-
-    }
-
-    function subtract() {
-        document.getElementById("ee").innerHTML = "-";
-        let b = document.getElementById("ee").value;
-    }
-
-    function multiply() {
-        document.getElementById("ee").innerHTML = "x";
-    }
-
-    function divide() {
-        document.getElementById("ee").innerHTML = "÷";
+    // làm dấu = với eval là dùng để tính ra ket qua!
+    function equal() {
+        let x = document.getElementById("ee").innerHTML;
+        let y = eval(x);
+        document.getElementById("ee").innerHTML = y;
     }
 
     function Action() {
-        numBer = 0;
-        document.getElementById("ee").innerHTML = numBer;
-        document.getElementById("cc").innerHTML = null;
-    }
-
-    let equal1
-
-    function equal() {
-        equal1 = p + numBer;
-        document.getElementById("ee").innerHTML = equal1;
-        numBer = equal1;
-
+        document.getElementById("ee").innerHTML = null;
     }
 </script>
 </body>
