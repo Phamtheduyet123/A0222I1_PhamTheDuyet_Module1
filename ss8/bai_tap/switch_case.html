@@ -17,31 +17,20 @@
         let numbers = parseInt(document.getElementById("id").value);
         switch (numbers) {
             case 1:
-                document.getElementById("vv").innerHTML = 'Tháng 1 có 31 ngày';
-                break;
             case 3:
-                document.getElementById("vv").innerHTML = "Tháng 3 có 31 ngày"; break;
             case 5:
-                document.getElementById("vv").innerHTML = "Tháng 5 có 31 ngày"; break;
             case 7:
-                document.getElementById("vv").innerHTML = "Tháng 7 có 31 ngày"; break;
             case 8:
-                document.getElementById("vv").innerHTML = "Tháng 8 có 31 ngày"; break;
             case 10:
-                document.getElementById("vv").innerHTML = "Tháng 10 có 31 ngày"; break;
             case 12:
-                document.getElementById("vv").innerHTML = "Tháng 12 có 31 ngày"; break;
+                document.getElementById("vv").innerHTML = "Tháng" + numbers + " có 31 ngày"; break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("vv").innerHTML = "Tháng "+ numbers+ " có 30 ngày"; break;
             case 2:
                 document.getElementById("vv").innerHTML = "Tháng 2 có 28 hoặc 29 ngày"; break;
-            case 4:
-                document.getElementById("vv").innerHTML = "Tháng 3 có 30 ngày"; break;
-            case 6:
-                document.getElementById("vv").innerHTML = "Tháng 5 có 30 ngày"; break;
-            case 9:
-                document.getElementById("vv").innerHTML = "Tháng 7 có 30 ngày"; break;
-            case 11:
-                document.getElementById("vv").innerHTML = "Tháng 8 có 30 ngày"; break;
-
         }
     }
 </script>

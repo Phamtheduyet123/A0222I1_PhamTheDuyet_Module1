@@ -3,10 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello world!</title>
+    <style>
+        .xx{
+            height: 20px;
+            text-align: right;
+            color: #1e11ff;
+        }
+
+        .ccc{
+            width: 100%;
+            height: 100%;
+            color: #1e11ff;
+            background-color: whitesmoke;
+            border-right-color: whitesmoke;
+            border-bottom-color: whitesmoke;
+
+        }
+        th{
+            height: 30px;
+            width: 60px;
+            border: 1px solid gray;
+           color: #1e11ff;
+        }
+        td{
+            height: 30px;
+            width: 60px;
+           border: 0px;
+            color: #1e11ff;
+
+        }
+
+    </style>
 </head>
 <body>
 <form>
-
+    <table border="5" style="border-color: black; background-color: whitesmoke" >
+        <tr class="xx">
+            <th id="name" colspan="4"></th>
+        </tr>
+        <tr  class="aa">
+            <td>
+                <button type="button" onclick="display('1')" name="q" value="1" class="ccc">1</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('2')" name="q" value="2" class="ccc">2</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('3')" name="q" value="3" class="ccc">3</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('+')" name="q" value="+" class="ccc">+</button>
+            </td>
+        </tr>
+        <tr class="aa">
+            <td>
+                <button type="button" onclick="display('4')" name="q" value="4" class="ccc">4</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('5')" name="q" value="5" class="ccc">5</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('6')" name="q" value="6" class="ccc">6</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('-')" name="q" value="-" class="ccc">-</button>
+            </td>
+        </tr>
+        <tr class="aa">
+            <td>
+                <button type="button" onclick="display('7')" name="q" value="7" class="ccc">7</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('8')" name="q" value="8" class="ccc">8</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('9')" name="q" value="9" class="ccc">9</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('*')" name="q" value="x" class="ccc">x</button>
+            </td>
+        </tr>
+        <tr class="aa">
+            <td>
+                <button type="button" onclick="oh()" name="q" value="C" class="ccc">C</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('0')" name="q" value="0" class="ccc">0</button>
+            </td>
+            <td>
+                <button type="button" onclick="same()" name="q" value="=" class="ccc">=</button>
+            </td>
+            <td>
+                <button type="button" onclick="display('/')" name="q" value="/" class="ccc">/</button>
+            </td>
+        </tr>
+    </table>
 </form>
+<script>
+    function display(val) {
+        document.getElementById("name").innerHTML += val;
+    }
+
+    function same() {
+        let y = document.getElementById("name").innerHTML;
+        let x = eval(y);
+        document.getElementById("name").innerHTML = x;
+    }
+
+    function oh() {
+        document.getElementById("name").innerHTML = null;
+    }
+</script>
 </body>
 </html>
