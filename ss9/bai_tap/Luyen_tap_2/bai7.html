@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hehe</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("a?",''));
+    let b = parseInt(prompt("b?",''));
+    let c = parseInt(prompt("c?",''));
+    let delta = b*b-4*a*c;
+    if( delta < 0){
+        alert("Phuong trinh vo nghiem");
+    }
+    if(delta == 0){
+        alert("Phuong trinh co nghiem kep:"+-b/(2*a));
+    }
+    if(delta > 0){
+        alert("Phuong trinh co 2 nghiem pha biet:"+"x1 ="+((-b+Math.sqrt(delta))/2*a) +" "+"x1 = "+((-b-Math.sqrt(delta))/2*a))  ;
+    }
+</script>
+</body>
+</html>

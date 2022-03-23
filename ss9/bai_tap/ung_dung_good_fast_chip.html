@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+        body{
+            font-size: 2em;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+
+        }
+        .check{
+            position: relative;
+
+        }
+        .check::before{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 25px;
+            background-color: #ddd;
+            display: inline-block;
+            top: -8px;
+            left: -30px;
+            border-radius: 25px;
+            box-shadow:  0 0 3px rgba(0,0,0,.5)
+        }
+        .check::after{
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            background-color: gray;
+            top: -8px;
+            border-radius: 25px;
+            left: -30px;
+            transition: 200ms;
+            transform: scale(1.2);
+        }
+        .check::after{
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            background-color: gray;
+            top: -8px;
+            border-radius: 25px;
+            left: -30px;
+            transition: 200ms;
+            transform: scale(1.2);
+        }
+        .check.good:checked:after{
+            left: -5px ;
+            background-color: #12ff27;
+        }
+        .check.fast:checked:after{
+            left: -5px ;
+            background-color: #2c54ff;
+        }
+        .check.cheap:checked:after{
+            left: -5px ;
+            background-color: #ff4828;
+        }
+        .check.good:checked:before{
+            background-color: #8BC34A;
+
+        }
+        .check.fast:checked:before{
+            background-color: #13a2ff;;
+
+        }
+        .check.cheap:checked:before{
+            background-color: #ff6b73;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="checkbox" class="check good" id="good" onchange="changed(this)">
+    <label for="good">Good</label><br>
+    <input type="checkbox" class="check fast" id="fast" onchange="changed(this)">
+    <label for="fast">Fast</label><br>
+    <input type="checkbox" class="check cheap" id="cheap" onchange="changed(this)">
+    <label for="cheap">Cheap</label><br>
+</div>
+<script>
+    var good = document.querySelector('.good'),
+        fast = document.querySelector('.fast'),
+        cheap = document.querySelector('.cheap');
+    function changed(e1) {
+        isGood= good.checked;
+        isFast= fast.checked;
+        isCheap= cheap.checked;
+
+        if(isGood && isFast && isCheap && e1 == cheap ){
+            fast.checked = false;
+        }
+        if(isGood && isCheap&& isFast && e1 == fast){
+            good.checked = false;
+        }
+        if(isCheap && isFast && isGood && e1 == good ){
+           cheap.checked = false;
+        }
+    }
+</script>
+</body>
+</html>

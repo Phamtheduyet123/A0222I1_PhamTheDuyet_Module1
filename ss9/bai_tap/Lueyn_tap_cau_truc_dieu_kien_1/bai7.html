@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+</head>
+<body>
+<script>
+    let minute = parseInt(prompt("minute?",''));
+    let postage;
+    if(minute > 100) {
+        postage = minute*2000;
+        alert("Cuoc phi phai tra la:"+postage);
+    }
+    else if(minute > 50) {
+        postage = minute*1500;
+        alert("Cuoc phi phai tra la:"+postage);
+    }
+    else if(minute > 10) {
+        postage = minute*1000;
+        alert("Cuoc phi phai tra la:"+postage);
+    }else {
+        postage = minute*500;
+        alert("Cuoc phi phai tra la:"+postage);
+    }
+</script>
+
+</body>
+</html>

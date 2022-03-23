@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt("money?", ''));
+    let months = parseInt(prompt("month?", ''));
+    let A;
+    if (months >=36 ) {
+       A = money*Math.pow((1+0.03),(months));
+            alert("Số tiền nhận được là:"+A);
+        }
+    else if(months >=24){
+        A = money*Math.pow((1+0.02),(months));
+        alert("Số tiền nhận được là:"+A);
+        }
+    else {
+        A = money*Math.pow((1+0.01),(months*12));
+        alert("Số tiền nhận được là:"+A);
+    }
+</script>
+</body>
+</html>

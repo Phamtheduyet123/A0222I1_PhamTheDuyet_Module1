@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<script>
+    let doanhso = parseInt(prompt("doanhso?",''));
+    let hoahong;
+    if(doanhso >= 1000000000) {
+        hoahong = doanhso*0.05;
+        alert("Hoa hong nhan dc la:"+hoahong);
+    }
+    else if(doanhso >=500000000) {
+        hoahong = doanhso * 0.04
+        alert("Hoa hong nhan dc la:"+hoahong);
+    }
+    else if(doanhso >=100000000){
+        hoahong = doanhso*0.03
+        alert("Hoa hong nhan dc la:"+hoahong);
+    }
+    else if(doanhso >=50000000){
+        hoahong = doanhso*0.02
+        alert("Hoa hong nhan dc la:"+hoahong);
+    }
+    else if(doanhso >=10000000){
+        hoahong = doanhso*0.01
+        alert("Hoa hong nhan dc la:"+hoahong);
+    }
+    else {
+        alert("Khong co hoa hong.");
+    }
+</script>
+</body>
+</html>
