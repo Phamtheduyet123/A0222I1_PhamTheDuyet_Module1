@@ -6,12 +6,17 @@
 </head>
 <body>
 <script>
-    let age = parseInt(prompt("age?",''));
+    let age = prompt("age?",'');
+    let Intage = parseInt(age);
 
 
-    if(age >0 && age<120 ){
-
-        alert("Ban da nhap dung");
+    if(age > 0 && age < 120 ) {
+        if (age == Intage) {
+            alert("Ban da nhap dung");
+        }
+        else {
+            alert("day khong phai tuoi cua 1 nguoi");
+        }
     }
     else {
         alert("day khong phai tuoi cua 1 nguoi");

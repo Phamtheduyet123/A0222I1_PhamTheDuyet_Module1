@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table cellpadding="1px">
+        <tr>
+            <td>
+                <h2><i>
+                    Sample Screen:
+                </i>
+                </h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="text" name="q" value=" ">
+            </td>
+            <td>
+                <input type="button" name="q" value="Add" onclick="Add()">
+            </td>
+            <td>
+                <input type="button" name="q" value="Display" onclick="Display()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td id="number"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function Add() {
+        array[x] = document.getElementById("text").value;
+        x++;
+        document.getElementById("text").value = "";
+    }
+
+    let c = " ";
+
+    function Display() {
+        for (let i = 0; i < array.length; i++) {
+            c += "Element " + i + " " + "=" + " " + array[i] + "<br>";
+        }
+        document.getElementById("number").innerHTML = c;
+    }
+</script>
+</body>
+</html>

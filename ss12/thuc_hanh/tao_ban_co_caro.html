@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<br><br><br>
+<p id="caro game"></p>
+<input type="button" name="q" onclick="Change()" value="Change Value">
+<script>
+    let sounts = "<table style='width: 100px;text-align: center'>";
+    let array = [[0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0]];
+    for (let i = 0; i < array.length; i++) {
+        sounts += "<tr>";
+        for (let j = 0; j < array.length; j++) {
+            sounts += "<td>" + array[i][j];
+        }
+    }
+    document.getElementById("caro game").innerHTML= sounts;
+    function Change() {
+        let data = "<table style='width: 100px;text-align: center'>";
+        let changeX = prompt("X", '');
+        let changeY = prompt("Y", '');
+        array[changeX][changeY] = "x"
+        for (let i = 0; i < array.length; i++) {
+            data += "<tr>";
+            for (let j = 0; j < array.length; j++) {
+               data += "<td>" + array[i][j];
+                }
+            }
+        document.getElementById("caro game").innerHTML= data;
+
+        }
+
+
+</script>
+</body>
+</html>

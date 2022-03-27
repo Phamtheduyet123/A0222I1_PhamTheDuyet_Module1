@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="play()" name="q" ; value="Chơi">Chơi</button>
+</form>
+
+<script>
+    function play() {
+
+        let khoang = prompt("Bạn Muốn đoán từ khoảng ");
+        let arr = khoang.split("-")
+        let min = parseInt(arr[0]);
+        let max = parseInt(arr[1]);
+        let random = Math.floor(Math.random() * (max - min + 1)) + min;
+        let guess = parseInt(prompt("Nhập số bạn muốn đoán."));
+
+        while (true) {
+            if (random == guess) {
+                alert("Chúc mừng bạn đã đoán đúng.");
+                break;
+            } else if (random > guess || random < guess) {
+                alert("Chưa đúng");
+                prompt("Lựa chọn lại");
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>
