@@ -11,11 +11,10 @@
 <input type="button" name="q" onclick="Change()" value="Change Value">
 <script>
     let sounts = "<table style='width: 100px;text-align: center'>";
-    let array = [[0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0]];
+    let array =[];
+    for(let i=0;i<5;i++){
+        array[i] = Array(0,0,0,0,0);
+    }
     for (let i = 0; i < array.length; i++) {
         sounts += "<tr>";
         for (let j = 0; j < array.length; j++) {

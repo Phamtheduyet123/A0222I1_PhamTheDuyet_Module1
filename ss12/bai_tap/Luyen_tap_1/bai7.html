@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let n = parseInt(prompt("Input n?", ''));
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt("Phan tu thu " + i));
+    }
+    document.write("Mang :");
+    for (let i = 0; i < a.length; i++) {
+        document.write(a[i] + " ");
+    }
+    let v = parseInt(prompt("nhap V?", ''));
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (a[j] === v) {
+                for (j; j < a.length; j++) {
+                    a[j] = a[j + 1];
+                }
+                a[a.length-1] = 0;
+                count++;
+            }
+        }
+    }
+    if (count == 0) {
+        alert("V khong thuoc mang");
+    }
+    document.write("Mang sau khi thay doi la: ");
+    for (let i = 0; i <a.length; i++) {
+        document.write(+a[i] + " ");
+    }
+</script>
+</body>
+</html>

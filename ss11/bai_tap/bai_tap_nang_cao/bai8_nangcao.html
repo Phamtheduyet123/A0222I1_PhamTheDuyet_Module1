@@ -12,11 +12,12 @@
 <script>
     function play() {
 
-        let khoang = prompt("Bạn Muốn đoán từ khoảng ");
-        let arr = khoang.split("-")
+        let khoang = prompt("Bạn Muốn đoán từ khoảng");
+        let arr = khoang.split("-");
         let min = parseInt(arr[0]);
         let max = parseInt(arr[1]);
         let random = Math.floor(Math.random() * (max - min + 1)) + min;
+        alert(random);
         let guess = parseInt(prompt("Nhập số bạn muốn đoán."));
 
         while (true) {

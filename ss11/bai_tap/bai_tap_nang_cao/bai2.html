@@ -6,16 +6,21 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("temperature?",''));
-    while (a>100 || a<5) {
+    do{
+        let a = parseInt(prompt("temperature?",''));
         if (a>100) {
             alert("Giảm nhiệt độ!");
             a = parseInt(prompt("temperature?", ''));
-        }else {
+        }else if(a<5){
             alert("Tăng nhiệt độ!");
             a = parseInt(prompt("temperature?", ''));
         }
+        else {
+            alert("Nhiet do:"+a);
+        }
     }
+    while (a>100 || a<5);
+
 </script>
 </body>
 </html>

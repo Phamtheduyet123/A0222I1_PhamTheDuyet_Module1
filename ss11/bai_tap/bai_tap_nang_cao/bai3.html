@@ -7,18 +7,20 @@
 <body>
 <script>
     let n=20;
-    let n1=0;
+    let n1=1;
     let n2=1;
     let n3=0;
-    for(let i=1;i<20;i++)
+    for(let i=1;i<=n;i++)
     {
-        if(i==1){
+        if(i==1 || i==2){
             document.write(1+" ");
         }
+        else {
        n3 = n2+n1;
        document.write(n3+" ");
        n1=n2;
        n2=n3;
+    }
     }
 </script>
 </body>
