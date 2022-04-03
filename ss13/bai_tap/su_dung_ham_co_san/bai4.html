@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" name="q" id="name1" >
+    <input type="button" name="q" value="Translate" onclick="tranSlate()">
+</form>
+<script>
+function tranSlate() {
+  let  b = document.getElementById("name1").value;
+let count =0;
+        let arr1 = ["Name","Address", "Class", " Object"," Like","Detail","Why"];
+        let arr2 = ["Tên","Địa chỉ","Lớp","Đối tượng","Thích","Chi tiết","Tại sao"];
+        for(let i=0; i<arr1.length;i++){
+            if(arr1[i] == b){
+                document.write(arr2[i]);
+                count++;
+                break;
+            }
+        }
+        if(count==0){
+                alert("Not found")
+        }
+
+}
+</script>
+</body>
+</html>

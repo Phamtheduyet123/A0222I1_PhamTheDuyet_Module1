@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0 ;
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("Input Number" + " " + (i + 1)));
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]>=10){
+            count++;
+        }
+    }
+    document.write("Co "+count+" so >= 10");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let number = parseInt(prompt("Input number arr?",''));
+    for(let i=0; i<number; i++){
+        arr[i] =prompt("Input number?");
+    }
+    let count = 0;
+
+    for(let i=0; i<arr.length; i++){
+        if(arr[i].charCodeAt()>=90 || arr[i].charCodeAt()<90){
+            count++;
+        }
+    }
+    document.write("Mang co " +count+" ky tu")
+</script>
+</body>
+</html>

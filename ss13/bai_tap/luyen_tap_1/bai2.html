@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Input number arr?"));
+    let arr = [];
+    let medium =.0;
+    for (let i = 0; i < number; i++) {
+        arr[i] = parseInt(prompt("Input Number" + " " + (i + 1)));
+        medium += arr[i];
+    }
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if(arr[i]>max){
+           max = arr[i];
+        }
+    }
+    document.write("Gia tri trung binh cua mang:"+(medium/number)+"<br>")
+    document.write("So lon nhat la: "+max);
+
+</script>
+</body>
+</html>

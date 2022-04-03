@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1=prompt("Input number str1?");
+    let str2 =prompt("Input number str2?");
+    let a = 0;
+
+    for (let j=0; j<str1.length;j++){
+        if(str1[j] !== str2[j]){
+            a++;
+            document.write("Hai chuoi khong giong nhau.");
+            break;
+
+        }
+    }
+    if(a==0){
+        document.write("hai chuoi bang nhau");
+    }
+</script>
+</body>
+</html>

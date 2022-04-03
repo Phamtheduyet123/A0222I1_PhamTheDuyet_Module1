@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Chuoi?",'');
+    let result = str.toString();
+    let string = [];
+    for(let i=0; i<result.length;i++){
+        if(result[i].charCodeAt() > 90){
+            string += result[i].toUpperCase();
+        }
+        else {
+            string += result[i].toLowerCase();
+
+        }
+    }
+    document.write(string);
+</script>
+
+</body>
+</html>

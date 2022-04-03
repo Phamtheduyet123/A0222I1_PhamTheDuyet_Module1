@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    let i=0;
+    do {
+       arr[i]=parseInt(prompt("Input number?"));
+       for(let j=i-1;j>=0;j--){
+           if(arr[i] === arr[j]){
+               alert("So nay da bi trung,Nhap lai!");
+               i--;
+           }
+       }
+       i++;
+    }while (i<10);
+    let max = arr[0];
+    let vt = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if(arr[i]>max){
+            max = arr[i];
+            vt = i;
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i]+" ");
+    }
+
+    document.write("So lon nhat la: "+max+"co vi tri: "+vt);
+
+</script>
+</body>
+</html>

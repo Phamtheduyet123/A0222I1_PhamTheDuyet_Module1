@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = Array(10);
+    let b = Array(10);
+    let c = Array(20);
+    for (let i=0; i<a.length;i++){
+        a[i]= parseInt(prompt("input arr1 "+(i+1)));
+    }
+    for (let i=0; i<a.length;i++){
+        b[i]= parseInt(prompt("input arr2"+(i+1)));
+    }
+    c = a.concat(b);
+    document.write(c);
+
+</script>
+</body>
+</html>
