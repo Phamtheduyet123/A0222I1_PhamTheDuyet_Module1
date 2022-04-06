@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let count = 0;
+    let flg = false;
     let str = parseInt(prompt("Inptu String?",''));
     let arr = [];
     for(let i=0; i<str;i++){
@@ -16,11 +16,11 @@
     for(let i=0; i<arr.length;i++){
         if(arr[i]===V){
             document.write("V is in the array");
-            count++;
+            flg = true;
             break;
         }
     }
-    if(count==0) {
+    if(!flg) {
         document.write("V is not in the array");
     }
 </script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form style="margin-left: 40%">
+    <h1>Type anything <slowly></slowly></h1>
+    <textarea id="text" oninput="input1()" cols="40" rows="10"></textarea>
+</form>
+<script>
+    let input = document.getElementById("text");
+    let str = "Quảng Bình mãi đỉnh!";
+    let textArr = str.split("");
+    let lens = 0;
+    let str1 ="";
+    alert(textArr.length);
+    function input1() {
+        str1+=textArr[lens];
+        lens++;
+        input.value = str1;
+        if(lens>textArr.length){
+            str1="";
+            lens =0;
+            input.value = str1;
+        }
+    }
+
+</script>
+</body>
+</html>

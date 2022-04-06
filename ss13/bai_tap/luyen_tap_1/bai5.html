@@ -10,8 +10,7 @@
     let str = prompt("Inptu String?",'');
     let result = str.toString();
     for(let i=0; i<result.length;i++){
-        if(result[i]%2==0|| result[i]%2==1){}
-        else {
+        if(result[i]=='-' && result[i+1]>=0){
             count++;
         }
     }
