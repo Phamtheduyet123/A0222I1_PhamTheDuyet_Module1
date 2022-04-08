@@ -18,10 +18,7 @@
 <table>
     <tr>
         <th>Product Name</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th id="total"></th>
+        <th id="total" style="width: 400px; text-align: right" ></th>
     </tr>
 </table>
 <p id="demo"></p>
@@ -35,14 +32,7 @@
         displayByTable();
         x++;
     }
-    /*-------------------------------------------*/
-    function displayByTable() {
-        let result = document.getElementById("demo").innerHTML = "";
-        for (let i = 0; i < listName.length; i++) {
-            result += listName[i];
-            document.getElementById("demo").innerHTML = result;
-        }
-    }
+
     /*-------------------------------------------*/
     function setDataByTable(val) {
         let stringTable = '<table>';
@@ -61,8 +51,18 @@
         stringTable += '<table>';
         // Gán giá trị cho mảng.
         listName[x] = stringTable;
-        console.log(x + listName[x]);
     }
+
+    /*-------------------------------------------*/
+    function displayByTable() {
+        let result = document.getElementById("demo").innerHTML = "";
+        for (let i = 0; i < listName.length; i++) {
+            result += listName[i];
+            document.getElementById("demo").innerHTML = result;
+        }
+        document.getElementById("total").innerHTML = listName.length + "products"
+    }
+
     /*-------------------------------------------*/
     function Edit(val) {
         let edit = prompt("Input:")
@@ -70,9 +70,19 @@
         setDataByTable(edit);
         displayByTable();
     }
+
     /*-------------------------------------------*/
     function Delete(val) {
-        listName[val] = " ";
+        for (let i = 0; i < listName.length; i++) {
+            if (i === val) {
+                for (i; i < listName.length; i++) {
+                    listName[i] = listName[i + 1];
+                }
+            }
+        }
+       listName.length--;
+        x--;
+        document.getElementById("total").innerHTML = listName.length + "products";
         displayByTable();
     }
 </script>
