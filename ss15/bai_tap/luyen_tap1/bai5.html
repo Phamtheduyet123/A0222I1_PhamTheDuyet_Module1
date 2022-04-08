@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    let value = prompt("Input name star?");
+    let flg = false;
+    function return2(x) {
+        for (let i=0;i<arr1.length; i++){
+            if(arr1[i]== x){
+                flg = true;
+                return arr2[i];
+            }
+        }
+        if (!false){
+            return -1;
+        }
+    }
+    let  result = return2(value);
+    document.write(result);
+
+</script>
+</body>
+</html>

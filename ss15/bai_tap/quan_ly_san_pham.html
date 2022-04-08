@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<table style="background-color: lightgray" cellpadding="10">
+    <tr>
+        <td>
+            <input type="text" name="q" placeholder="New Product" id="product">
+            <input type="button" onclick="getDataByTable()" value="Add" style="background-color: limegreen ">
+        </td>
+    </tr>
+</table>
+<h3>Display All Product</h3>
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th id="total"></th>
+    </tr>
+</table>
+<p id="demo"></p>
+<script>
+    let listName = [];
+    let x = 0;
+
+    function getDataByTable() {
+        let val = document.getElementById("product").value;
+        setDataByTable(val);
+        displayByTable();
+        x++;
+    }
+    /*-------------------------------------------*/
+    function displayByTable() {
+        let result = document.getElementById("demo").innerHTML = "";
+        for (let i = 0; i < listName.length; i++) {
+            result += listName[i];
+            document.getElementById("demo").innerHTML = result;
+        }
+    }
+    /*-------------------------------------------*/
+    function setDataByTable(val) {
+        let stringTable = '<table>';
+        for (let i = x; i < x + 1; i++) {
+            stringTable += '<tr>';
+            for (let j = 0; j < 1; j++) {
+                stringTable += '<td style="width: 300px">' + val + '</td>' +
+                    '<td>' + '<input type="button" name="q" onclick="Edit(' + i + ')" value="Edit" style="background-color: limegreen">' +
+                    '</td>' + '<td style="width: 40px">' + '</td>' +
+                    '<td>' + '<input type="button" name="q" onclick="Delete(' + i + ')" value="Delete" style="background-color: limegreen">' +
+                    '</td>' +
+                    '<td>' + '</td>';
+            }
+            stringTable += '</tr>'
+        }
+        stringTable += '<table>';
+        // Gán giá trị cho mảng.
+        listName[x] = stringTable;
+        console.log(x + listName[x]);
+    }
+    /*-------------------------------------------*/
+    function Edit(val) {
+        let edit = prompt("Input:")
+        x = val;
+        setDataByTable(edit);
+        displayByTable();
+    }
+    /*-------------------------------------------*/
+    function Delete(val) {
+        listName[val] = " ";
+        displayByTable();
+    }
+</script>
+</body>
+</html>

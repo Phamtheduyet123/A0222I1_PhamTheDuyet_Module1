@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .vvv {
+            border-bottom: 2px solid black;
+        }
+
+        td {
+            width: 50px;
+
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr class="vvv">
+        <td>
+            <b>Feet</b>
+        </td>
+        <td></td>
+        <td>
+            <b>
+                Meter
+            </b>
+
+        </td>
+        <td style="border-right: 2px solid gray"></td>
+        <td></td>
+        <td><b>Meter</b></td>
+        <td></td>
+        <td><b>Feet</b></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" name="q" id="disPlay()" oninput="InPut()">
+        </td>
+        <td></td>
+        <td>
+            <p id="number"></p>
+        </td>
+        <td style="border-right: 2px solid gray"></td>
+        <td></td>
+        <td><input type="number" name="q" id="disPlay1()" oninput="InPut1()"></td>
+        <td></td>
+        <td><p id="changeNumber"></p></td>
+    </tr>
+
+</table>
+<script>
+    function meterToFoot(foot) {
+       let meter = 0.305 * foot;
+        return meter;
+    }
+    function InPut(){
+        let value = document.getElementById("disPlay()").value;
+        let result = meterToFoot(value)
+        document.getElementById("number").innerHTML = result;
+    }
+    function footToMeter(meter) {
+       let foot = 3.279 * meter
+        return foot;
+    }
+    function InPut1() {
+        let value1 = document.getElementById("disPlay1()").value;
+        let result1 = footToMeter(value1)
+        document.getElementById("changeNumber").innerText = result1;
+    }
+</script>
+</body>
+</html>
