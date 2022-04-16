@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function classBuildingCircle(radius) {
+        this.radius = radius;
+
+        this.getRadius = function () {
+            return this.radius;
+        }
+        this.getArea = function () {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let circle = new classBuildingCircle(3.5);
+    let changeColor = 'color';
+    let Color = 'blue';
+    classBuildingCircle[changeColor]=Color;
+    let radius = circle.getRadius();
+    let Area = circle.getArea();
+    alert("Radius: "+radius+ " Area: " +Area + " Color: "+classBuildingCircle.color);
+
+
+</script>
+</body>
+</html>

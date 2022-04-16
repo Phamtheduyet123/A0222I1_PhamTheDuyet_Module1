@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="200"></canvas>
+<script>
+    function Rectangle(x, y) {
+        this.x = x;
+        this.y = y;
+        this.getX = function () {
+            return this.x;
+        }
+        this.getY = function () {
+            return this.y;
+        }
+       /* this.setX = function () {
+            return this.x;
+        }
+        this.setY = function () {
+            return this.y;
+        }*/
+        this.calculateTheCircumference = function () {
+            return (this.getX() + this.getY()) * 2;
+        }
+        this.theArea = function () {
+            return this.getX() * this.getY();
+        }
+        this.changeRentangle = function (x, y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    function display() {
+        alert("The perimeter of the rectangle is: " + rectangle.calculateTheCircumference());
+        alert("The area of the rectangle is " + rectangle.theArea());
+    }
+   function createRentangle(){
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.fillStyle = "black";
+        ctx.fillRect(0,0,rectangle.getX(),rectangle.getY());
+        ctx.fill();
+   }
+    let rectangle = new Rectangle(20, 34);
+    createRentangle();
+    display();
+    rectangle.changeRentangle(300, 400);
+    alert("The Rectangle after change:")
+    display();
+    createRentangle();
+
+
+
+</script>
+</body>
+</html>

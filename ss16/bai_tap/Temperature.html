@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changeTemperature(x) {
+        this.x = x;
+        this.degreesCelsiusToDegreesFahrenheit = function () {
+            return (x * 1.8) + 32;
+        }
+        this.degreesCelsiusToDegreesKevin = function () {
+            return x + 273.15;
+        }
+    }
+
+    let temperature = new changeTemperature(25);
+    alert("Degrees Fahrenheit: " + temperature.degreesCelsiusToDegreesFahrenheit());
+    alert("DegreesKevin: " + temperature.degreesCelsiusToDegreesKevin());
+</script>
+</body>
+</html>

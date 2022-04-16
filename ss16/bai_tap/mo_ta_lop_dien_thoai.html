@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile{
+        constructor(phone,pin) {
+            this.phone = phone;
+            this.receivemessages = "";
+            this.pin = pin;
+            this.composeMessage = "";
+            this.inbox = " ";
+            this.messageSent = "";
+            this.turn =true;
+        }
+        checkPhone(){
+            if(this.pin>0 && this.turn) {
+                return true;
+            }
+            else {return false}
+        }
+        turnOn(){
+            return true;
+        }
+        turnOff(){
+            return false;
+        }
+        refillPhoneBattery(){
+            if(this.pin<100){
+                return true;
+            }
+        }
+        texting(){
+
+        }
+        setMessages(message){
+            this.receivemessages = message;
+        }
+        getMessages(){
+            return this.receivemessages;
+        }
+        receiveMessages(phone,message){
+        phone.setMessages(message);
+        }
+        sendMessage(){
+
+        }
+        seeNewsInbox(){
+
+        }
+        viewSentMessages(){}
+    }
+    let iphone = new Mobile("Iphone",56);
+
+    let sasmung = new Mobile("samsung");
+     sasmung.receivemessages("Iphone","Nghi choi");
+     let message = sasmung.getMessages();
+     alert(message);
+</script>
+</body>
+</html>
