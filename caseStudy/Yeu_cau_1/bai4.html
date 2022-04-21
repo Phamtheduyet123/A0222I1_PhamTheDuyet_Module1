@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Nhap vao cot
+    let value = parseInt(prompt("Input number?"));
+    // Hang = cot * 2 -1;
+    let result = value * 2 - 1;
+    for (let i = 1; i <= value; i++) {
+        for (let j = 1; j <= result; j++) {
+            //Khoi tao Dieu kien de if = true.
+            let l = value - i;
+            if (i < value) {
+                if (j == l + 1 || j == result - l) {
+                    document.write("*")
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            } else {
+                document.write("*")
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>

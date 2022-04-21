@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputSalary = parseInt(prompt("Input Salary?",''));
+    if(inputSalary > 15000000){
+            inputSalary = inputSalary - inputSalary*0.2;
+    }
+    else if(inputSalary > 7000000){
+        inputSalary = inputSalary - inputSalary*0.1;
+    }
+    else {
+        inputSalary = inputSalary - inputSalary*0.05;
+    }
+    document.write("The actual amount of the employee's salary: "+inputSalary)
+</script>
+</body>
+</html>

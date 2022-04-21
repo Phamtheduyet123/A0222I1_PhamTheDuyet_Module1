@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = parseInt(prompt("Input number?"));
+    let result = value * 2 - 1
+    for (let i = 1; i <= value; i++) {
+        for (let j = 1; j <= result; j++) {
+            let l = value - i;
+            if (j > l && j <= result - l) {
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+
+    }
+</script>
+</body>
+</html>

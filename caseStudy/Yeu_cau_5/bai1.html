@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let m = parseInt(prompt("input m?"));
+    let n = parseInt(prompt("input n?"));
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = parseInt(prompt("input number?"))
+        }
+    }
+
+    function total(b,c) {
+        if (arr[b][c] % 2 === 0) {
+           return true;
+        }
+        else {
+            return false;
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+           if(total(i,j)===true){
+               count +=arr[i][j];
+           }
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>

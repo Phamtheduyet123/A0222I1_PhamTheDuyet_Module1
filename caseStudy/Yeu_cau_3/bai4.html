@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<input type="text" oninput="Display()" name="q" id="text">
+<p id="demo"></p>
+</form>
+<script>
+    function Display() {
+         let value1 = document.getElementById("text").value;
+         let str= value1.toString();
+         let result = "";
+            for (let i = 0; i <str.length ; i++) {
+                value1 = str[i]
+                if (value1 == 1) {
+                    document.getElementById("demo").innerHTML = "một";
+                }
+                if (value1 == 2) {
+                    document.getElementById("demo").innerHTML = "hai";
+                }
+                if (value1 == 3) {
+                    document.getElementById("demo").innerHTML = "ba";
+                }
+                if (value1 == 4) {
+                    document.getElementById("demo").innerHTML = "bốn";
+                }
+                if (value1 == 5) {
+                    document.getElementById("demo").innerHTML = "năm";
+                }
+                if (value1 == 6) {
+                    document.getElementById("demo").innerHTML = "sáu";
+                }
+                if (value1 == 7) {
+                    document.getElementById("demo").innerHTML = "bảy";
+                }
+                if (value1 == 8) {
+                    document.getElementById("demo").innerHTML = "tám";
+                }
+                if (value1 == 9) {
+                    document.getElementById("demo").innerHTML = "chín";
+                }
+                if (value1 == 10) {
+                    document.getElementById("demo").innerHTML = "mười";
+                }
+                result += document.getElementById("demo").innerHTML;
+                document.getElementById("demo").innerHTML = result;
+            }
+
+    }
+</script>
+</body>
+</html>

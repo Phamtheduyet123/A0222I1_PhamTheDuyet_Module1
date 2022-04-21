@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="quan_ly_sinh_vien.css">
+</head>
+<body>
+<form>
+    <input type="text" name="q" id="dedmo" placeholder="ID">
+    <input type="text" name="q" id="dedmo1" placeholder="Name">
+    <input type="text" name="q" id="dedmo2" placeholder="Address">
+    <input type="text" name="q" id="dedmo3" placeholder="Gender">
+    <input type="text" name="q" id="dedmo4" placeholder="Phone">
+    <input type="text" name="q" id="dedmo5" placeholder="Medium Score">
+    <input type="button" name="q" onclick="getDataByTable()" value="Add"><br><br>
+    <input type="button" name="q" id="save"  onclick="saveData()" value="Save" style="display:none">
+    Search student:
+    <input type="text" name="q" id="checkList" oninput="checkListStudents()" placeholder="Input Id">
+    <h3>Display All Students</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th >Name</th>
+            <th></th>
+            <th>Address</th>
+            <th></th>
+            <th>Gender</th>
+            <th style="width: 50px"></th>
+            <th>Phone Number</th>
+         
+            <th>Medium Score</th>
+        </tr>
+    </table>
+    <p id="result"></p>
+</form>
+</body>
+</html>
+<script src="Quan_ly_sinh_vien.js"></script>

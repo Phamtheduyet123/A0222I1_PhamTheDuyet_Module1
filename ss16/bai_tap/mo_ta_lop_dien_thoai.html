@@ -45,18 +45,10 @@
         receiveMessages(phone,message){
         phone.setMessages(message);
         }
-        sendMessage(){
-
-        }
-        seeNewsInbox(){
-
-        }
-        viewSentMessages(){}
     }
     let iphone = new Mobile("Iphone",56);
-
-    let sasmung = new Mobile("samsung");
-     sasmung.receivemessages("Iphone","Nghi choi");
+    let sasmung = new Mobile("samsung",98);
+     iphone.receiveMessages(sasmung,"Nghi choi");
      let message = sasmung.getMessages();
      alert(message);
 </script>

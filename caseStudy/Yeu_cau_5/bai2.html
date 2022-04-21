@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let m = parseInt(prompt("input m?"));
+    let n = parseInt(prompt("input n?"));
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = parseInt(prompt("input number?"))
+        }
+    }
+
+    function listSnt(x,y) {
+        let dem = 0;
+        for (let i = 2; i <arr[x][y] ; i++) {
+            if (arr[x][y] % i == 0) {
+                dem++;
+            }
+        }
+        if(arr[x][y]==1){
+            return false;
+        }
+        if (dem === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if(listSnt(i,j)==true){
+                document.write(arr[i][j]+" ");
+                count ++;
+            }
+        }
+    }
+    document.write("<br>"+count);
+</script>
+</body>
+</html>

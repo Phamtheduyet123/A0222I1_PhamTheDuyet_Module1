@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    let chooseDrink = "";
+    do {
+         chooseDrink = parseInt(prompt("1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)", ''));
+        if (chooseDrink == 1) {
+            total += 15000;
+        }
+        if (chooseDrink == 2) {
+            total += 20000;
+        }
+        if (chooseDrink == 3 || chooseDrink == 4) {
+            total += 30000;
+        }
+        if (chooseDrink == 5) {
+            total += 5000;
+        }
+        if (chooseDrink == 6) {
+            total += 20000;
+        }
+
+    } while (chooseDrink != 7);
+    alert("Số tiền phải trả là :" + total);
+</script>
+</body>
+</html>

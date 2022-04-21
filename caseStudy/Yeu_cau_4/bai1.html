@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrlongest =[];
+    let number=0;
+    let inputChar = prompt("Input Char?",'');
+    let lowerChar = inputChar.toLowerCase();
+    let str = lowerChar.split("")
+    //let array=[]
+    // for (let i = 0; i <str.length ; i++) {
+    //     if (str[i]!=""){
+    //         array.push(str[i])
+    //     }
+    // }
+    // alert(array.join(" "))
+    for (let i = 0; i <str.length ; i++) {
+      if(str[i]==" " && str[i+1]==" "){
+          for (i; i <str.length ; i++) {
+              str[i] = str[i+1];
+          }
+          str.length --;
+          i--;
+      }
+    }
+    for (let i = 0; i <str.length ; i++) {
+        if(i==0 || str[i-1]==" "){
+            str[i] = str[i].toUpperCase();
+        }
+    }
+    for (let i = 0; i <str.length ; i++) {
+        document.write(str[i]);
+    }
+    str.push(" ");
+    let long = "";
+    findTheLongestWordf();
+    function findTheLongestWordf() {
+        for (let i = 0; i <str.length ; i++) {
+            if(str[i]!=" "){
+                long +=str[i];
+            }
+            else {
+                arrlongest[number] = long;
+                number++;
+                long = "";
+            }
+
+        }
+        let max = arrlongest[0].length;
+        let result =arrlongest[0];
+        for (let i = 1; i < arrlongest.length ; i++) {
+            if(arrlongest[i].length > max){
+                max = arrlongest[i].length;
+                result = arrlongest[i];
+
+            }
+        }
+        document.write("<br>The longest word in the string is: "+result);
+    }
+
+</script>
+</body>
+</html>

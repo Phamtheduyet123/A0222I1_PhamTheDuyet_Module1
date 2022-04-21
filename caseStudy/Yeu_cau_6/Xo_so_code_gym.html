@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Xổ Số CodeGym</h1>
+    <input type="text" name="q" id="demo0" onclick="chooseNumber()">
+    <input type="text" name="q" id="demo1" onclick="chooseNumber()">
+    <input type="text" name="q" id="demo2" onclick="chooseNumber()">
+    <input type="text" name="q" id="demo3" onclick="chooseNumber()">
+    <input type="text" name="q" id="demo4" onclick="chooseNumber()">
+    <input type="text" name="q" id="demo5" onclick="chooseNumber()">
+    <br><br>
+    <input type="text" name="q" id="demo6">
+    <input type="text" name="q" id="demo7">
+    <input type="text" name="q" id="demo8">
+    <input type="text" name="q" id="demo9">
+    <input type="text" name="q" id="demo10">
+    <input type="text" name="q" id="demo11">
+    <br><br>
+    <button type="button" name="q" onclick="byTicket()">Mua Vé</button>
+    <button type="button" name="q" onclick="resultByTicket()">Xem kết quả</button>
+
+</form>
+<script>
+    let arr1 = [];
+    let arr2 = [];
+    let flg = false;
+    let check = true;
+    // Biến này để kiểm tra số vé mà người chơi đã mua.
+    let checkTicket = 0;
+    // Hàm này dùng để mua vé.
+    function byTicket() {
+        if (check == true) {
+            let result = parseInt(prompt("Bạn có 2 lựa chọn:\n1.Bạn muốn tự chọn số.\n2.Hệ thống tự random."))
+            if (result === 1) {
+                flg = true;
+            } else if (result === 2) {
+                ramdomNumber();
+            }
+            if (checkTicket == 3) {
+                alert("Bạn đã sử dụng hết số vé của mình ngày hôm nay.");
+                check = false;
+            }
+            checkTicket++;
+        }
+    }
+
+    let result = 0;
+    //Hàm này cho phép ta nhập số từ bàn phím.
+    function chooseNumber() {
+        if (flg == true) {
+            result = parseInt(prompt("Select number 0-99"));
+            document.getElementById("demo0").value = result;
+            arr1[0] = result;
+            result = parseInt(prompt("Select number 0-99"));
+            document.getElementById("demo1").value = result;
+            arr1[1] = result;
+            result = parseInt(prompt("Select number 0-99"));
+            document.getElementById("demo2").value = result;
+            arr1[2] = result;
+            result = parseInt(prompt("Select number 0-99"));
+            document.getElementById("demo3").value = result;
+            arr1[3] = result;
+            result = parseInt(prompt("Select number 0-99"));
+            document.getElementById("demo4").value = result;
+            arr1[4] = result;
+            result = parseInt(prompt("Select number 0-99"));
+            document.getElementById("demo5").value = result;
+            arr1[5] = result;
+        } else {
+            alert("Tickets please!")
+        }
+    }
+        //Hàm này cho phép máy tính tự random thay cho chúng ta.
+    function ramdomNumber() {
+            result = Math.floor(Math.random() * 100);
+            document.getElementById("demo0").value = result;
+            arr1[0] = result;
+            result = Math.floor(Math.random() * 100);
+            document.getElementById("demo1").value = result;
+            arr1[1] = result;
+            result = Math.floor(Math.random() * 100);
+            document.getElementById("demo2").value = result;
+            arr1[2] = result;
+            result = Math.floor(Math.random() * 100);
+            document.getElementById("demo3").value = result;
+            arr1[3] = result;
+            result = Math.floor(Math.random() * 100);
+            document.getElementById("demo4").value = result;
+            arr1[4] = result;
+            result = Math.floor(Math.random() * 100);
+            document.getElementById("demo5").value = result;
+            arr1[5] = result;
+
+    }
+
+    //Hàm này để máy tính random ra kết quả của sổ xố.
+    function computerRandom() {
+        result = Math.floor(Math.random() * 100);
+        document.getElementById("demo6").value =  result;
+        arr2[0] =  result;
+        result = Math.floor(Math.random() * 100);
+        document.getElementById("demo7").value =  result;
+        arr2[1] =  result;
+        result= Math.floor(Math.random() * 100);
+        document.getElementById("demo8").value =  result;
+        arr2[2] =  result;
+        result = Math.floor(Math.random() * 100);
+        document.getElementById("demo9").value =result;
+        arr2[3] = result;
+        result = Math.floor(Math.random() * 100);
+        document.getElementById("demo10").value = result;
+        arr2[4] = result;
+        result = Math.floor(Math.random() * 100);
+        document.getElementById("demo11").value = result;
+        arr2[5] = result;
+    }
+//Hàm này để kiểm tra kết quả.
+    function resultByTicket() {
+        if (arr1.length!=0) {
+            computerRandom();
+            for (let i = 0; i < 3; i++) {
+                if (arr1[i] == arr2[i]) {
+                    arr1.splice(i, 1);
+                }
+            }
+            if (arr1.length == 0) {
+                alert("Chúc mừng bạn đã dạt giải nhất với số tiền 2 tỷ VND.")
+            } else if (arr1.length == 1) {
+                alert("Chức mừng bạn đã đạt giải nhì với số tiền 1 tỷ VND.")
+            } else if (arr1.length == 4 || arr1.length == 3) {
+                alert("Chức mưgnf bạn đã đạt giải 3 với số tiền 500 triệu VND.")
+            } else {
+                alert("chúc bạn may mắn lần sau.")
+            }
+        }
+        else {alert("By Tickets.")}
+        arr1.length = 0;
+    }
+
+
+</script>
+</body>
+</html>

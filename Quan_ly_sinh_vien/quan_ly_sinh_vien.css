@@ -1,0 +1,10 @@
+input{
+    width: 100px;
+}
+td{
+    text-align: left;
+}
+th{
+    width: 70px;
+    text-align: left;
+}

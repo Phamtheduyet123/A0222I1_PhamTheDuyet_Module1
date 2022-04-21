@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let m = parseInt(prompt("input m?"));
+    let n = parseInt(prompt("input n?"));
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = parseInt(prompt("input number?"))
+        }
+    }
+
+    function minMax() {
+        let min = arr[0][0];
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if(arr[i][j]>max){
+                  max = arr[i][j];
+                }
+                if(arr[i][j]<min){
+                    min = arr[i][j];
+                }
+            }
+        }
+        return "Gia tri lon nhat la: "+max +"<br>Gia tri nho nhat la: "+ min;
+    }
+    document.write("<br>"+minMax());
+</script>
+</body>
+</html>
