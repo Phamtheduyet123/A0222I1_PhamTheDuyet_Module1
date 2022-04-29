@@ -84,6 +84,7 @@ function setDataBYTalbe(liststudents) {
     for (let i = 0; i < liststudents.length; i++) {
         if(boolean){ i =liststudents[i]; }
         stringTable += '<tr>';
+
         for (let j = 0; j < 1; j++) {
             stringTable += '<td style="width: 300px">' + listStudents[i].getId() + '</td>' +
                 '<td style="width: 300px">' + listStudents[i].getName() + '</td>' +
@@ -98,7 +99,7 @@ function setDataBYTalbe(liststudents) {
         }
         stringTable += '</tr>'
     }
-    stringTable += '<table>';
+    stringTable += '</table>';
     document.getElementById("result").innerHTML = stringTable;
     boolean = false;
 }

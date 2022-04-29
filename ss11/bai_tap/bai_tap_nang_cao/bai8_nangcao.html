@@ -21,12 +21,13 @@
         let guess = parseInt(prompt("Nhập số bạn muốn đoán."));
 
         while (true) {
-            if (random == guess) {
+            if (random === guess) {
                 alert("Chúc mừng bạn đã đoán đúng.");
                 break;
-            } else if (random > guess || random < guess) {
+            }
+            else {
                 alert("Chưa đúng");
-                prompt("Lựa chọn lại");
+                guess = parseInt(prompt("Lựa chọn lại"));
             }
         }
 
